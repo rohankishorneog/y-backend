@@ -22,6 +22,14 @@ mongoose
   .then(() => console.log("Connected to MongoDB"))
   .catch((err) => console.error("MongoDB connection error:", err));
 
+const cors = require("cors");
+app.use(
+  cors({
+    origin: "https://y-frontend-sigma.vercel.app/", 
+    credentials: true,
+  })
+);
+
 // Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/data", dataRoutes);
