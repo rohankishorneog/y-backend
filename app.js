@@ -25,7 +25,7 @@ mongoose
 const cors = require("cors");
 app.use(
   cors({
-    origin: "https://y-frontend-sigma.vercel.app/", 
+    origin: "https://y-frontend-sigma.vercel.app",
     credentials: true,
   })
 );
